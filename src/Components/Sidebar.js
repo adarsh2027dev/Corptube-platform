@@ -1,6 +1,7 @@
-
+"use client";
 import Image from 'next/image'
 import Link from 'next/link'
+
 
 export default function Sidebar() {
   return (
@@ -26,13 +27,22 @@ export default function Sidebar() {
           {/* Middle Icons Section */}
           <div className="mid-icons border-2 border-gray-500 border-t-0 flex flex-col items-center gap-6 pt-9 pb-12 px-2">
             {/* The set of icons */}
-            <Image
+            {/* <Image
                src="/assets/Polygon 28.png"
                alt='profile Img'
                width={50}
                height={50}
                className='ml-2'
-             />
+             /> */}
+             <Link href="/dashboard" className="cursor-pointer"> 
+              <Image 
+                className='ml-2' 
+                src="/assets/Polygon 28.png"
+                alt='profile Img'
+                width={50} 
+                height={50} 
+              />
+            </Link>
             <Image
              src="/assets/2 7.png"
              alt="Icon 1" 

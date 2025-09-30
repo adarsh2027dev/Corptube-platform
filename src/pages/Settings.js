@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './styles/Settings.module.css';
-import Sidebar from '../pages/Sidebar';
+import Sidebar from '../Components/Sidebar';
 import { Eye, EyeOff } from 'lucide-react';
 
 //  internal view and layout
