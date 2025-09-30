@@ -1,0 +1,111 @@
+/* Custom CSS for the Neon/Glow Effects */
+
+/* Glow effect for the main container */
+.mainContainerGlow {
+    /* Subtle blue/purple glow around the container */
+    box-shadow: 0 0 10px rgba(100, 50, 255, 0.4), 
+                0 0 10px rgba(70, 40, 200, 0.6);
+    border: 2px solid rgba(100, 50, 255, 0.7);
+    
+}
+
+/* Gradient border card wrapper + inner content */
+.gradientCard {
+    position: relative;
+    padding: 4px; /* thickness of the gradient border */
+    border-radius: 16px;
+    background: linear-gradient(135deg, rgba(99,102,241,0.9), rgba(59,130,246,0.8) 40%, rgba(147,51,234,0.9));
+    box-shadow:
+        0 0 24px rgba(99,102,241,0.25),
+        0 0 12px rgba(59,130,246,0.2),
+        inset 0 0 8px rgba(147,51,234,0.15);
+}
+
+.gradientCardInner {
+    border-radius: 12px;
+    background: #0B0B0F; /* deep panel color */
+}
+
+/* Circular gradient ring for icon buttons (e.g., arrow) */
+.gradientRing {
+    position: relative;
+    padding: 3px;
+    border-radius: 9999px;
+    background: radial-gradient(80% 80% at 50% 50%, rgba(99,102,241,0.9), rgba(59,130,246,0.7));
+    box-shadow: 0 0 12px rgba(99,102,241,0.35);
+}
+
+.ringInner {
+    border-radius: 9999px;
+    background: #0B0B0F;
+}
+
+/* Custom border and shadow for the interactive buttons */
+.neonBorder {
+   
+    border: 2px solid #5C6BC0; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), 
+                0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.neonBorder:hover {
+    
+    box-shadow: 0 0 10px #7986CB,
+                0 0 5px #7986CB inset;
+}
+
+/* Horizontal tabs for subviews */
+.tabsContainer {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: space-around;
+    padding: 8px 0;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    transform: translateY(16px);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.tabsActive {
+    animation: slideUpFade 400ms ease forwards;
+}
+
+.tabItem {
+    background: rgb(32, 31, 31);
+    color: #e5e7eb; /* gray-200 */
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    transition: background 200ms, transform 200ms;
+}
+
+.tabItem:hover {
+    background: #1f2937; /* gray-800 */
+    transform: translateY(-2px);
+}
+
+.tabItemActive {
+    background: #4f46e5; /* indigo-600 */
+    color: #ffffff;
+    border-color: transparent;
+}
+
+/* Subview container animation */
+.subViewContainer {
+    border: none;
+    box-shadow: none;
+    animation: slideContentIn 300ms ease forwards;
+}
+
+@keyframes slideUpFade {
+    0% { transform: translateY(16px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; pointer-events: auto; }
+}
+
+@keyframes slideContentIn {
+    0% { transform: translateY(12px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
