@@ -206,4 +206,7 @@ html {
 
 
 
+.clip-polygon {
+  clip-path: polygon(50% 0%, 100% 25%, 80% 100%, 20% 100%, 0% 25%);
+}
 
