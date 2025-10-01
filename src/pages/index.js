@@ -83,41 +83,44 @@ const HomePage = () => {
       <main className="min-h-screen w-[96%] ml-[4%] bg-black text-white p-6">
       {/* BUSINESS NEWS */}
       <section>
-        <h2 className="text-xl font-bold text-blue-400 mb-4">BUSINESS NEWS</h2>
+        <div className="flex justify-between">
+        <h2 className="text-5xl  text-heading   mb-4">BUSINESS NEWS</h2>
+        <button className="text-white text-xl bg-indigo-700 rounded-r-full rounded-l-full px-8 mb-5 cursor-pointer ">Login</button>
+        </div>
 
         {/* Dropdowns */}
-        <div className="space-y-3">
+        <div className="space-y-3 ml-11 mr-11">
           <button
             onClick={() => toggleDropdown("international")}
-            className="w-full flex justify-between items-center border border-blue-400 px-4 py-2 rounded-md"
+            className="w-full text-3xl bg-[#1E1E1E] flex justify-between items-center border border-blue-400 border-b-[#220FCD] border-b-2 px-4 py-2 rounded-md"
           >
             INTERNATIONAL NEWS
-            <span>{dropdowns.international ? "▲" : "▼"}</span>
+            <div className="text-black bg-white square-aspect-ratio w-10 h-10 rounded-full p-2"><p className="text-xl">{dropdowns.international ? "▲" : "▼"}</p></div>
           </button>
 
           <button
             onClick={() => toggleDropdown("national")}
-            className="w-full flex justify-between items-center border border-blue-400 px-4 py-2 rounded-md"
+            className="w-full text-3xl bg-[#1E1E1E] flex justify-between items-center border border-blue-400 border-b-[#220FCD] border-b-2 px-4 py-2 rounded-md"
           >
             NATIONAL NEWS
-            <span>{dropdowns.national ? "▲" : "▼"}</span>
+            <div className="text-black bg-white square-aspect-ratio w-10 h-10 rounded-full p-2"><p className="text-xl">{dropdowns.national ? "▲" : "▼"}</p></div>
           </button>
 
           <button
             onClick={() => toggleDropdown("stock")}
-            className="w-full flex justify-between items-center border border-blue-400 px-4 py-2 rounded-md"
+            className="w-full text-3xl bg-[#1E1E1E] flex justify-between items-center border border-blue-400 border-b-[#220FCD] border-b-2 px-4 py-2 rounded-md"
           >
             STOCK NEWS
-            <span>{dropdowns.stock ? "▲" : "▼"}</span>
+            <div className="text-black bg-white square-aspect-ratio w-10 h-10 rounded-full p-2"><p className="text-xl">{dropdowns.stock ? "▲" : "▼"}</p></div>
           </button>
         </div>
       </section>
 
       {/* POSTS TO EXPLORE */}
       <section className="mt-10">
-        <h2 className="text-xl font-bold text-blue-400 mb-6">POSTS TO EXPLORE</h2>
+        <h2 className="text-5xl  text-heading   mb-6">POSTS TO EXPLORE</h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 ml-11 mr-11 gap-6">
           {posts.map((post) => (
             <Link
               href={post.link}
@@ -141,9 +144,9 @@ const HomePage = () => {
       </section>
         {/* POSTS TO EXPLORE */}
         <section className="mt-10">
-        <h2 className="text-xl font-bold text-blue-400 mb-6">POSTS TO EXPLORE</h2>
+        <h2 className="text-5xl  text-heading   mb-6">POSTS TO EXPLORE</h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 ml-11 mr-11 gap-6">
           {posts.map((post) => (
             <Link
               href={post.link}
@@ -163,35 +166,39 @@ const HomePage = () => {
       </section>
        {/* PROJECTS TO EXPLORE */}
        <section className="mt-16">
-        <h2 className="text-xl font-bold text-blue-400 mb-6">PROJECTS TO EXPLORE</h2>
+        <h2 className="text-5xl  text-heading   mb-6">PROJECTS TO EXPLORE</h2>
 
-        <div className="flex items-start gap-6 bg-black border border-blue-400 rounded-2xl p-6 shadow-lg">
+        <div className=" ml-11 mr-11 rounded-r-4xl rounded-l-4xl bg-gradient-to-b from-[#164CD7] to-[#999999] p-1 shadow-lg">
           {/* Logo + Buttons */}
+          <div className="flex gap-4 items-center bg-[#140808] rounded-r-4xl rounded-l-4xl p-4">
+
+          
           <div className="flex flex-col items-center">
-            <div className="w-20 h-20 rounded-full bg-gray-900 flex items-center justify-center border border-blue-400">
+        
               <Image
                 src={project.logo}
                 alt={project.name}
-                width={50}
-                height={50}
+                width={80}
+                height={80}
+                 
               />
-            </div>
+     
 
-            <div className="flex flex-col gap-3 mt-4">
-              <button className="px-3 py-2 rounded-md bg-blue-600 hover:bg-blue-700 text-sm">
+            <div className="flex flex-col bg-[#1E1E1E] rounded-4xl p-4 border border-white gap-3 mt-4">
+              <button className="px-3 py-2 rounded-md bg-[#575FFE] text-white text-sm">
                 INTERACT
               </button>
-              <button className="px-3 py-2 rounded-md bg-blue-600 hover:bg-blue-700 text-sm">
+              <button className="px-3 py-2 rounded-md bg-[#575FFE] text-white text-sm">
                 SUPPORT
               </button>
-              <button className="px-3 py-2 rounded-md bg-blue-600 hover:bg-blue-700 text-sm">
+              <button className="px-3 py-2 rounded-md bg-[#575FFE] text-white text-sm">
                 SAVE
               </button>
             </div>
           </div>
 
           {/* Project Content */}
-          <div className="flex-1">
+          <div className="flex-1 bg-[#1E1E1E] p-4 rounded-3xl border border-white">
             <h3 className="text-lg font-bold">{project.name}</h3>
             <p className="text-sm font-semibold mt-1">
               Stage: {project.stage}
@@ -203,16 +210,44 @@ const HomePage = () => {
               {project.description}
             </p>
           </div>
+          </div>
         </div>
 
         {/* See More Projects Button */}
-        <div className="flex justify-center mt-8">
-          <button className="flex items-center gap-2 px-8 py-3 rounded-full bg-gray-900 border border-blue-400 hover:bg-blue-800 text-lg font-bold shadow-md">
-            SEE MORE PROJECTS
-            <span className="text-2xl">›</span>
-          </button>
+        <div className="flex justify-center ml-32 mr-32  mt-8 rounded-r-full rounded-l-full bg-gradient-to-b from-[#164CD7] to-[#999999] p-1 shadow-lg">
+        <div className="flex  justify-between rounded-r-full rounded-l-full w-full bg-[#140808] p-4">
+        
+           <p className="text-white mt-3 text-3xl">SEE MORE PROJECTS</p>
+            <div className="square-aspect-ratio  ">
+            <Image src="/assets/landingphoto/Ellipse 7.png" alt="arrow-down" width={60} height={60} />
+            </div>
+        </div>
+      </div>
+      </section>
+
+     {/* POSTS TO EXPLORE */}
+     <section className="mt-10">
+        <h2 className="text-5xl  text-heading   mb-6">POSTS TO EXPLORE</h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 ml-11 mr-11 gap-6">
+          {posts.map((post) => (
+            <Link
+              href={post.link}
+              key={post.id}
+              className="rounded-xl overflow-hidden bg-gray-900 hover:scale-105 transition-transform shadow-lg"
+            >
+              <Image
+                src={post.image}
+                alt={post.title}
+                width={400}
+                height={500}
+                className="w-full h-144 object-cover"
+              />
+            </Link>
+          ))}
         </div>
       </section>
+
     </main>
 
     </div>

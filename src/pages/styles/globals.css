@@ -222,4 +222,13 @@ html {
     0% 30%
   );
 }
-  
+
+.text-heading {
+  font-weight: bold;
+ 
+  background: linear-gradient(90deg, #7B8BD9 10%, #F5E2E2 60%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* for Firefox */
+  color: transparent;   
+}
