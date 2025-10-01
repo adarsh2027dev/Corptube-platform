@@ -2,6 +2,10 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
+  "/resetpassword": "pages/resetpassword.js",
   "/": "pages/index.js",
-  "/authpage": "pages/authpage.js"
+  "/api/auth/resetpassword": "pages/api/auth/resetpassword.js",
+  "/dashboard": "pages/dashboard.js",
+  "/authpage": "pages/authpage.js",
+  "/api/auth/login": "pages/api/auth/login.js"
 }
