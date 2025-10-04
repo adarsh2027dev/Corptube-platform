@@ -1,1 +1,95 @@
-{"version":3,"caseSensitive":false,"basePath":"","rewrites":{"beforeFiles":[],"afterFiles":[],"fallback":[]},"redirects":[{"source":"/:path+/","destination":"/:path+","permanent":true,"internal":true,"regex":"^(?:\\/((?:[^\\/]+?)(?:\\/(?:[^\\/]+?))*))\\/$"}],"headers":[]}
+{
+  "version": 3,
+  "pages404": true,
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/authpage",
+      "regex": "^/authpage(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/authpage(?:/)?$"
+    },
+    {
+      "page": "/dashboard",
+      "regex": "^/dashboard(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard(?:/)?$"
+    },
+    {
+      "page": "/otp",
+      "regex": "^/otp(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/otp(?:/)?$"
+    },
+    {
+      "page": "/Settings",
+      "regex": "^/Settings(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Settings(?:/)?$"
+    },
+    {
+      "page": "/uploads",
+      "regex": "^/uploads(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/uploads(?:/)?$"
+    },
+    {
+      "page": "/uploadsAll/uploadEvents",
+      "regex": "^/uploadsAll/uploadEvents(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/uploadsAll/uploadEvents(?:/)?$"
+    },
+    {
+      "page": "/uploadsAll/uploadPosts",
+      "regex": "^/uploadsAll/uploadPosts(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/uploadsAll/uploadPosts(?:/)?$"
+    },
+    {
+      "page": "/uploadsAll/uploadVideos",
+      "regex": "^/uploadsAll/uploadVideos(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/uploadsAll/uploadVideos(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "rsc",
+    "varyHeader": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "prefetchHeader": "next-router-prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSuffix": ".prefetch.rsc",
+    "prefetchSegmentHeader": "next-router-segment-prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments"
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}
