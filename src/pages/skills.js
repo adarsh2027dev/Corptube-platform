@@ -1,12 +1,12 @@
 "use client";
- 
+ import Sidebar from "@/Components/Sidebar";
 import Link from "next/link";
 import Image from "next/image";
 
 // Reusable skill card
 function SkillCard({ skill }) {
   return (
-    <div className="h-[50vh] bg-gradient-to-r from-[#140808] to-[#837575]  ml-11  rounded-2xl shadow-md border-1 border-[#FFF2F2]  flex flex-col items-center p-4 relative">
+    <div className="h-[50vh] mb-11 bg-gradient-to-r from-[#140808] to-[#837575]  ml-11  rounded-2xl shadow-md border-1 border-[#FFF2F2]  flex flex-col items-center p-4 relative">
       {/* Octagon Icon */}
  
         <Image src="/assets/landingphoto/Polygon17.png" alt="Octagon" width={230} height={230} />
@@ -40,19 +40,7 @@ function SkillCard({ skill }) {
   );
 }
 
-// Special "See More" card
-function SeeMoreCard() {
-  return (
-    
-    <Link href="/skills" className="bg-gradient-to-r from-[#140808] to-[#837575] border-1 border-[#FFF2F2] ml-10 cursor-pointer rounded-2xl shadow-md w-74 flex flex-col items-center justify-center relative">
-      <div className="w-20 h-20 flex items-center justify-center bg-black rounded-full border border-neutral-700">
-        <span className="text-4xl font-bold">›</span>
-      </div>
-      <p className="font-bold text-lg mt-2">SEE MORE</p>
-    </Link>
-
-  );
-}
+ 
 
 export default function SkillsToExplore() {
 //   const [skills, setSkills] = useState([]);
@@ -69,6 +57,21 @@ export default function SkillsToExplore() {
     },
     {
       "id": 3,
+      "title": "Data Analysis",
+      "author": "Ravi Kumar"
+    },
+       {
+      "id": 4,
+      "title": "Prompt Engineering",
+      "author": "Priyanshu N."
+    },
+    {
+      "id": 5,
+      "title": "Web Development",
+      "author": "Pankaj Singh"
+    },
+    {
+      "id": 6,
       "title": "Data Analysis",
       "author": "Ravi Kumar"
     },
@@ -91,18 +94,40 @@ export default function SkillsToExplore() {
 //   }, []);
 
   return (
-    <section className="mt-16">
-      <h2 className="text-5xl  text-heading   mb-6">
-        SKILLS TO EXPLORE
-      </h2>
+    <div className="bg-black">
+           <Sidebar />
 
-      <div className="grid  grid-cols-1 md:grid-cols-4 g">
+    <section>
+     
+      <div className="relative flex items-center justify-center mb-6">
+  {/* Centered Heading */}
+  <div className="bg-[#1E1E1E] mt-5 text-[#7B8BD9] border-2 border-[#5434CA]  text-xl sm:text-4xl font-bold px-6 sm:px-8 py-3 rounded-2xl shadow text-center">
+    SKILLS TO EXPLORE
+  </div>
+
+  {/* Back Button (absolute right) */}
+  <Link
+    href="/"
+    className="absolute right-0 flex items-center justify-center"
+  >
+    <Image
+      src="/assets/back-btn.png"
+      alt="Back button"
+      width={64}
+      height={64}
+      className="w-12 h-12 sm:w-16 sm:h-16 rounded-full hover:bg-indigo-600 transition-colors"
+    />
+  </Link>
+</div>
+
+      <div className="grid  p-8 grid-cols-1 md:grid-cols-3 ">
      
         {skills.map((skill) => (
           <SkillCard key={skill.id} skill={skill} />
         ))}
-        <SeeMoreCard />
       </div>
     </section>
+    </div>
+
   );
 }
